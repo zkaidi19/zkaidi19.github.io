@@ -1,25 +1,31 @@
 # Kaidi Zhang - Personal Website
 
-A modern, responsive personal website built with Flask, showcasing my academic journey, skills, and experiences as a Data Science student at the University of Michigan.
+A modern, responsive personal website showcasing my academic journey, skills, and experiences as a Data Science student at the University of Michigan. Built with Flask and automatically deployed to GitHub Pages.
 
-![Website Preview](https://img.shields.io/badge/Status-Live-brightgreen)
-![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![Flask](https://img.shields.io/badge/Flask-3.0.0-lightgrey)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.0-purple)
+![Website Live](https://img.shields.io/badge/Website-Live-brightgreen?logo=github)
+![Python](https://img.shields.io/badge/Python-3.8.1+-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-3.1.2-lightgrey?logo=flask)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.0-purple?logo=bootstrap)
+![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue?logo=github)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 🌟 Project Overview
 
-This personal website serves as a comprehensive digital portfolio, featuring a clean and modern design with a blue/light color scheme. Built with Python Flask backend and responsive frontend technologies, it provides an engaging user experience across all devices.
+This personal website serves as a comprehensive digital portfolio, featuring a clean and modern design with a blue/light color scheme. Built with Python Flask for development and automatically converted to static files for GitHub Pages deployment.
+
+**🌐 Live Website:** [https://zkaidi19.github.io](https://zkaidi19.github.io)
+
+The site combines the power of Flask templating for easy development with the simplicity of static hosting for reliable deployment.
 
 ### ✨ Key Features
 
 - **Responsive Design**: Mobile-first approach with Bootstrap 5
 - **Modern UI/UX**: Clean, professional design with smooth animations
-- **Fast Performance**: Optimized loading times and interactive elements
+- **Fast Performance**: Optimized static files with CDN resources
 - **SEO Friendly**: Semantic HTML structure and meta tags
 - **Accessible**: WCAG compliant design principles
-- **API Endpoint**: JSON API for resume data access
+- **GitHub Pages**: Automatic deployment and hosting
+- **Static API**: JSON resume data available at `/api/resume.json`
 
 ## 🏗️ Project Architecture
 
@@ -155,6 +161,30 @@ zkaidi19.github.io/
 5. **Access the Website**
    Open your browser and navigate to: `http://localhost:5000`
 
+### Development Workflow
+
+**For Local Development:**
+```bash
+# Start Flask development server
+uv run python run.py dev
+# Visit: http://localhost:5000
+```
+
+**For Static Site Generation:**
+```bash
+# Generate static files for GitHub Pages
+uv run python build_static.py
+# Files created in /docs directory
+
+# Test static files locally (optional)
+cd docs && python -m http.server 8000
+# Visit: http://localhost:8000
+```
+
+**Development vs Production:**
+- **Development**: Use Flask server for live editing and debugging
+- **Production**: Static files automatically deployed to GitHub Pages
+
 ### Production Deployment
 
 #### Using Gunicorn (Recommended)
@@ -267,26 +297,36 @@ uv run pytest tests/test_routes.py
 - **API Testing**: JSON endpoint validation
 - **Form Validation**: Contact form testing
 
-## 🚀 Deployment Options
+## 🚀 GitHub Pages Deployment
 
-### 1. Traditional Web Hosting
-- Upload files to web server
-- Configure Python environment
-- Set up domain and SSL
+This website is configured for automatic deployment to GitHub Pages using the special repository naming convention `{username}.github.io`.
 
-### 2. Platform as a Service (PaaS)
-- **Heroku**: Easy deployment with git integration
-- **Railway**: Modern deployment platform
-- **DigitalOcean App Platform**: Scalable hosting
+### Automatic Deployment Process
 
-### 3. Cloud Platforms
-- **AWS**: EC2, Elastic Beanstalk, or Lambda
-- **Google Cloud**: App Engine or Compute Engine
-- **Azure**: App Service or Virtual Machines
+1. **Push Changes**: Commit and push changes to the `main` branch
+2. **GitHub Actions**: Automatically builds static files using `build_static.py`
+3. **Deploy**: Static files are deployed to GitHub Pages
+4. **Live**: Website is available at `https://zkaidi19.github.io`
 
-### 4. GitHub Pages (Static Version)
-- Convert to static HTML for GitHub Pages
-- Use GitHub Actions for automated deployment
+### Manual Build (Optional)
+
+You can also build static files locally:
+
+```bash
+# Generate static files
+uv run python build_static.py
+
+# Files will be created in /docs directory
+```
+
+### GitHub Pages Configuration
+
+1. Go to repository **Settings** → **Pages**
+2. Set **Source** to "Deploy from a branch"
+3. Select **Branch**: `main` and **Folder**: `/docs`
+4. Save settings
+
+The site will automatically update whenever you push changes to the main branch!
 
 ## 📈 Future Enhancements
 
