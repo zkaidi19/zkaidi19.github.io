@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Kaidi Zhang{% endblock %}
+
+{% block content %}
+<section class="page-header py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-5 fw-bold mb-3">Contact Me</h1>
+                <p class="lead text-muted">Let's connect and explore opportunities together</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-content py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Information -->
+            <div class="col-lg-6">
+                <div class="contact-info">
+                    <h2 class="fw-bold mb-4">Get In Touch</h2>
+                    <p class="mb-4">
+                        I'm always excited to connect with fellow students, professionals, and anyone interested 
+                        in data science, programming, or collaborative projects. Feel free to reach out!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope fa-2x text-primary"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="fw-bold mb-2">Email</h5>
+                                <p class="text-muted mb-2">Best way to reach me for professional inquiries</p>
+                                <a href="mailto:zkaidi@umich.edu" class="contact-link">
+                                    zkaidi@umich.edu
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone fa-2x text-success"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="fw-bold mb-2">Phone</h5>
+                                <p class="text-muted mb-2">Available for calls and text messages</p>
+                                <a href="tel:734-730-0647" class="contact-link">
+                                    (734) 730-0647
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin fa-2x text-info"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="fw-bold mb-2">LinkedIn</h5>
+                                <p class="text-muted mb-2">Professional networking and career opportunities</p>
+                                <a href="https://www.linkedin.com/in/kaidi-zhang-6a862a2b0/" target="_blank" class="contact-link">
+                                    Connect on LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt fa-2x text-warning"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="fw-bold mb-2">Location</h5>
+                                <p class="text-muted mb-2">Currently based in</p>
+                                <span class="contact-text">
+                                    Ann Arbor, Michigan 48103
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="availability-info mt-5">
+                        <h4 class="fw-bold mb-3">Availability</h4>
+                        <div class="availability-grid">
+                            <div class="availability-item">
+                                <i class="fas fa-briefcase text-primary me-2"></i>
+                                <span>Open to internship opportunities</span>
+                            </div>
+                            <div class="availability-item">
+                                <i class="fas fa-project-diagram text-success me-2"></i>
+                                <span>Available for collaborative projects</span>
+                            </div>
+                            <div class="availability-item">
+                                <i class="fas fa-users text-info me-2"></i>
+                                <span>Interested in networking events</span>
+                            </div>
+                            <div class="availability-item">
+                                <i class="fas fa-graduation-cap text-warning me-2"></i>
+                                <span>Open to mentorship opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+                <div class="contact-form-section">
+                    <h3 class="fw-bold mb-4">Send Me a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                    <label for="firstName">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                    <label for="lastName">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                    <label for="email">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="inquiryType" required>
+                                        <option value="">Select inquiry type</option>
+                                        <option value="internship">Internship Opportunity</option>
+                                        <option value="project">Project Collaboration</option>
+                                        <option value="networking">Networking</option>
+                                        <option value="mentorship">Mentorship</option>
+                                        <option value="general">General Inquiry</option>
+                                    </select>
+                                    <label for="inquiryType">Inquiry Type</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" placeholder="Your Message" style="height: 150px" required></textarea>
+                                    <label for="message">Your Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="privacyConsent" required>
+                                    <label class="form-check-label" for="privacyConsent">
+                                        I consent to having this website store my submitted information for response purposes.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="form-note mt-4">
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Note:</strong> This is a demonstration contact form. For actual inquiries, 
+                            please use the direct contact methods listed on the left.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Response Time Information -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="response-info text-center">
+                    <h3 class="fw-bold mb-4">Response Time</h3>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="response-card">
+                                <div class="response-icon">
+                                    <i class="fas fa-clock text-success"></i>
+                                </div>
+                                <h5 class="fw-bold">Email</h5>
+                                <p class="text-muted">Within 24-48 hours</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="response-card">
+                                <div class="response-icon">
+                                    <i class="fas fa-phone text-primary"></i>
+                                </div>
+                                <h5 class="fw-bold">Phone</h5>
+                                <p class="text-muted">Same day response</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="response-card">
+                                <div class="response-icon">
+                                    <i class="fab fa-linkedin text-info"></i>
+                                </div>
+                                <h5 class="fw-bold">LinkedIn</h5>
+                                <p class="text-muted">Within 2-3 business days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="contact-cta">
+                    <h3 class="mb-3">Let's Build Something Together!</h3>
+                    <p class="mb-4">
+                        Whether you're looking for a collaborator, intern, or just want to connect, 
+                        I'd love to hear from you.
+                    </p>
+                    <div class="quick-contact-buttons">
+                        <a href="mailto:zkaidi@umich.edu" class="btn btn-primary btn-lg me-3 mb-2">
+                            <i class="fas fa-envelope me-2"></i>Email Me
+                        </a>
+                        <a href="https://www.linkedin.com/in/kaidi-zhang-6a862a2b0/" target="_blank" class="btn btn-outline-primary btn-lg mb-2">
+                            <i class="fab fa-linkedin me-2"></i>Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Show success message (for demonstration)
+    const alert = document.createElement('div');
+    alert.className = 'alert alert-success mt-3';
+    alert.innerHTML = '<i class="fas fa-check-circle me-2"></i><strong>Message sent!</strong> This is a demo form. Please use direct contact methods for actual inquiries.';
+    
+    this.appendChild(alert);
+    
+    // Reset form
+    this.reset();
+    
+    // Remove alert after 5 seconds
+    setTimeout(() => {
+        alert.remove();
+    }, 5000);
+});
+</script>
+{% endblock %}

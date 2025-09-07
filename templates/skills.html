@@ -1,0 +1,382 @@
+{% extends "base.html" %}
+
+{% block title %}Skills - Kaidi Zhang{% endblock %}
+
+{% block content %}
+<section class="page-header py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-5 fw-bold mb-3">Skills & Expertise</h1>
+                <p class="lead text-muted">My technical abilities and language proficiencies</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills-content py-5">
+    <div class="container">
+        <!-- Programming Languages -->
+        <div class="skills-section mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-bold text-primary">Programming Languages</h2>
+                    <p class="text-muted">Technologies I use to build solutions and analyze data</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="skill-card h-100">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-python fa-3x text-primary"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4 class="fw-bold">Python</h4>
+                                <p class="text-muted mb-3">Primary language for data science and analysis</p>
+                            </div>
+                        </div>
+                        <div class="skill-details">
+                            <div class="skill-progress mb-3">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" style="width: 85%"></div>
+                                </div>
+                                <small class="text-muted">Proficient</small>
+                            </div>
+                            <div class="skill-applications">
+                                <h6 class="fw-bold mb-2">Applications:</h6>
+                                <ul class="skill-list">
+                                    <li>Data analysis and visualization</li>
+                                    <li>Statistical computing</li>
+                                    <li>Machine learning basics</li>
+                                    <li>Scripting and automation</li>
+                                </ul>
+                            </div>
+                            <div class="skill-libraries mt-3">
+                                <h6 class="fw-bold mb-2">Familiar Libraries:</h6>
+                                <div class="library-tags">
+                                    <span class="badge bg-outline-primary me-2">NumPy</span>
+                                    <span class="badge bg-outline-primary me-2">Pandas</span>
+                                    <span class="badge bg-outline-primary me-2">Matplotlib</span>
+                                    <span class="badge bg-outline-primary">Jupyter</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skill-card h-100">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-code fa-3x text-info"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4 class="fw-bold">C++</h4>
+                                <p class="text-muted mb-3">Systems programming and algorithm implementation</p>
+                            </div>
+                        </div>
+                        <div class="skill-details">
+                            <div class="skill-progress mb-3">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" style="width: 75%"></div>
+                                </div>
+                                <small class="text-muted">Intermediate</small>
+                            </div>
+                            <div class="skill-applications">
+                                <h6 class="fw-bold mb-2">Applications:</h6>
+                                <ul class="skill-list">
+                                    <li>Data structures and algorithms</li>
+                                    <li>Object-oriented programming</li>
+                                    <li>Performance-critical applications</li>
+                                    <li>System-level programming</li>
+                                </ul>
+                            </div>
+                            <div class="skill-concepts mt-3">
+                                <h6 class="fw-bold mb-2">Key Concepts:</h6>
+                                <div class="concept-tags">
+                                    <span class="badge bg-outline-info me-2">OOP</span>
+                                    <span class="badge bg-outline-info me-2">STL</span>
+                                    <span class="badge bg-outline-info me-2">Memory Management</span>
+                                    <span class="badge bg-outline-info">Algorithms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Languages -->
+        <div class="skills-section mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-bold text-primary">Language Proficiencies</h2>
+                    <p class="text-muted">Bridging cultures through multilingual communication</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="language-card h-100">
+                        <div class="language-header text-center mb-4">
+                            <div class="language-flag">
+                                <i class="fas fa-flag-usa fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="fw-bold mt-3">English</h4>
+                            <p class="text-muted">Native/Fluent</p>
+                        </div>
+                        <div class="language-skills">
+                            <div class="skill-breakdown">
+                                <div class="row text-center">
+                                    <div class="col-3">
+                                        <div class="skill-meter">
+                                            <div class="meter-circle">
+                                                <span class="meter-text">100%</span>
+                                            </div>
+                                            <p class="small mt-2">Speaking</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="skill-meter">
+                                            <div class="meter-circle">
+                                                <span class="meter-text">100%</span>
+                                            </div>
+                                            <p class="small mt-2">Reading</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="skill-meter">
+                                            <div class="meter-circle">
+                                                <span class="meter-text">100%</span>
+                                            </div>
+                                            <p class="small mt-2">Writing</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="skill-meter">
+                                            <div class="meter-circle">
+                                                <span class="meter-text">100%</span>
+                                            </div>
+                                            <p class="small mt-2">Listening</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="language-context mt-4">
+                                <h6 class="fw-bold mb-2">Usage Context:</h6>
+                                <ul class="context-list">
+                                    <li>Academic studies and presentations</li>
+                                    <li>Professional communication</li>
+                                    <li>Technical documentation</li>
+                                    <li>Daily conversation and social interaction</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="language-card h-100">
+                        <div class="language-header text-center mb-4">
+                            <div class="language-flag">
+                                <i class="fas fa-flag fa-3x text-danger"></i>
+                            </div>
+                            <h4 class="fw-bold mt-3">Mandarin Chinese</h4>
+                            <p class="text-muted">Native/Fluent</p>
+                        </div>
+                        <div class="language-skills">
+                            <div class="skill-breakdown">
+                                <div class="row text-center">
+                                    <div class="col-3">
+                                        <div class="skill-meter">
+                                            <div class="meter-circle">
+                                                <span class="meter-text">100%</span>
+                                            </div>
+                                            <p class="small mt-2">Speaking</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="skill-meter">
+                                            <div class="meter-circle">
+                                                <span class="meter-text">95%</span>
+                                            </div>
+                                            <p class="small mt-2">Reading</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="skill-meter">
+                                            <div class="meter-circle">
+                                                <span class="meter-text">90%</span>
+                                            </div>
+                                            <p class="small mt-2">Writing</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="skill-meter">
+                                            <div class="meter-circle">
+                                                <span class="meter-text">100%</span>
+                                            </div>
+                                            <p class="small mt-2">Listening</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="language-context mt-4">
+                                <h6 class="fw-bold mb-2">Usage Context:</h6>
+                                <ul class="context-list">
+                                    <li>Cultural performances and activities</li>
+                                    <li>Family and community communication</li>
+                                    <li>Academic coursework in Chinese culture</li>
+                                    <li>Cross-cultural bridge building</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Technical Skills -->
+        <div class="skills-section mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-bold text-primary">Technical & Soft Skills</h2>
+                    <p class="text-muted">Additional competencies developed through coursework and experience</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="tech-skills-card">
+                        <h4 class="fw-bold mb-3">
+                            <i class="fas fa-laptop-code text-primary me-2"></i>Technical Skills
+                        </h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-chart-bar text-success me-2"></i>
+                                <span>Data Analysis & Visualization</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-calculator text-info me-2"></i>
+                                <span>Statistical Computing</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database text-warning me-2"></i>
+                                <span>Data Structures</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cogs text-secondary me-2"></i>
+                                <span>Algorithm Design</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-square-root-alt text-primary me-2"></i>
+                                <span>Linear Algebra</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-project-diagram text-info me-2"></i>
+                                <span>Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="soft-skills-card">
+                        <h4 class="fw-bold mb-3">
+                            <i class="fas fa-users text-primary me-2"></i>Soft Skills
+                        </h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-chalkboard-teacher text-success me-2"></i>
+                                <span>Teaching & Instruction</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-heart text-danger me-2"></i>
+                                <span>Patience & Empathy</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-lightbulb text-warning me-2"></i>
+                                <span>Creativity & Innovation</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-ear-listen text-info me-2"></i>
+                                <span>Active Listening</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-handshake text-primary me-2"></i>
+                                <span>Teamwork & Collaboration</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-globe text-success me-2"></i>
+                                <span>Cultural Awareness</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning & Growth -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="learning-section text-center">
+                    <h3 class="fw-bold mb-4">Continuous Learning</h3>
+                    <p class="lead mb-4">
+                        As a Data Science student, I'm constantly expanding my skillset and exploring new technologies
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="learning-card">
+                                <div class="learning-icon">
+                                    <i class="fas fa-brain text-primary"></i>
+                                </div>
+                                <h5 class="fw-bold">Machine Learning</h5>
+                                <p class="text-muted">Exploring algorithms and model development</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="learning-card">
+                                <div class="learning-icon">
+                                    <i class="fas fa-chart-line text-success"></i>
+                                </div>
+                                <h5 class="fw-bold">Advanced Statistics</h5>
+                                <p class="text-muted">Deepening statistical analysis capabilities</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="learning-card">
+                                <div class="learning-icon">
+                                    <i class="fas fa-cloud text-info"></i>
+                                </div>
+                                <h5 class="fw-bold">Data Engineering</h5>
+                                <p class="text-muted">Learning data pipeline and infrastructure</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="skills-cta">
+                    <h3 class="mb-3">Ready to Collaborate?</h3>
+                    <p class="mb-4">Let's work together on data science projects or discuss opportunities!</p>
+                    <div class="btn-group-vertical btn-group-sm-horizontal">
+                        <a href="{{ url_for('activities') }}" class="btn btn-outline-primary me-2 mb-2">
+                            <i class="fas fa-star me-2"></i>View Experience
+                        </a>
+                        <a href="{{ url_for('education') }}" class="btn btn-outline-primary me-2 mb-2">
+                            <i class="fas fa-graduation-cap me-2"></i>Academic Background
+                        </a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mb-2">
+                            <i class="fas fa-envelope me-2"></i>Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

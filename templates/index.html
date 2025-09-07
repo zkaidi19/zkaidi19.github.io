@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block title %}Kaidi Zhang - Data Science Student{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Hi, I'm <span class="text-primary">Kaidi Zhang</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Data Science Student at University of Michigan passionate about 
+                        programming, statistics, and solving real-world problems with data.
+                    </p>
+                    <div class="hero-stats mb-4">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="fw-bold text-primary">3.98</h3>
+                                    <p class="small text-muted">GPA</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="fw-bold text-primary">10+</h3>
+                                    <p class="small text-muted">AP Classes</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="fw-bold text-primary">2</h3>
+                                    <p class="small text-muted">Languages</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-envelope me-2"></i>Get In Touch
+                        </a>
+                        <a href="{{ url_for('about') }}" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-user me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image text-center">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h4 class="mt-3">Kaidi Zhang</h4>
+                        <p class="text-muted">Data Science Student</p>
+                        <div class="profile-tags">
+                            <span class="badge bg-primary me-2">Python</span>
+                            <span class="badge bg-primary me-2">C++</span>
+                            <span class="badge bg-primary me-2">Statistics</span>
+                            <span class="badge bg-primary">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Overview Section -->
+<section class="overview-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Quick Overview</h2>
+                <p class="text-muted">A glimpse into my academic journey and experiences</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="overview-card h-100">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Education</h4>
+                    <p class="text-muted">
+                        Currently pursuing Bachelor of Science in Data Science at University of Michigan, 
+                        with experience at UM-SJTU Joint Institute in Shanghai.
+                    </p>
+                    <a href="{{ url_for('education') }}" class="btn btn-outline-primary btn-sm">
+                        Learn More <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="overview-card h-100">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Activities</h4>
+                    <p class="text-muted">
+                        Ice skating instructor, member of rXn Chinese-American Dance Group, 
+                        and active volunteer in community service projects.
+                    </p>
+                    <a href="{{ url_for('activities') }}" class="btn btn-outline-primary btn-sm">
+                        Learn More <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="overview-card h-100">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>Skills</h4>
+                    <p class="text-muted">
+                        Proficient in Python and C++ programming languages, 
+                        fluent in English and Mandarin Chinese.
+                    </p>
+                    <a href="{{ url_for('skills') }}" class="btn btn-outline-primary btn-sm">
+                        Learn More <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="cta-content">
+                    <h2 class="mb-4">Let's Connect!</h2>
+                    <p class="lead mb-4">
+                        I'm always interested in new opportunities and collaborations. 
+                        Feel free to reach out!
+                    </p>
+                    <div class="contact-info mb-4">
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <a href="mailto:zkaidi@umich.edu" class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>zkaidi@umich.edu</span>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="tel:734-730-0647" class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>734-730-0647</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-paper-plane me-2"></i>Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

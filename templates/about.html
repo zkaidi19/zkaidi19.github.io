@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}About - Kaidi Zhang{% endblock %}
+
+{% block content %}
+<section class="page-header py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-5 fw-bold mb-3">About Me</h1>
+                <p class="lead text-muted">Get to know more about my journey and aspirations</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-content py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div class="about-text">
+                    <h2 class="mb-4">Hello! I'm Kaidi Zhang</h2>
+                    <p class="mb-4">
+                        I'm a dedicated Data Science student at the University of Michigan's College of Literature, 
+                        Science, and the Arts (LSA), currently in my sophomore year. My academic journey has taken 
+                        me from Ann Arbor to Shanghai, where I've had the unique opportunity to study at the 
+                        University of Michigan-Shanghai Jiao Tong University Joint Institute.
+                    </p>
+                    <p class="mb-4">
+                        With a strong academic background (3.98 GPA) and extensive AP coursework, I've developed 
+                        a solid foundation in mathematics, computer science, and statistical analysis. My passion 
+                        lies in leveraging data to solve real-world problems and uncover meaningful insights.
+                    </p>
+                    <p class="mb-4">
+                        Beyond academics, I'm actively involved in my community as an ice skating instructor and 
+                        a proud member of the rXn Chinese-American Co-ed Dance Group, where I celebrate my 
+                        cultural heritage through traditional performances.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-stats">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h4>Location</h4>
+                                <p class="text-muted">Ann Arbor, Michigan</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h4>Class of</h4>
+                                <p class="text-muted">2027</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h4>Languages</h4>
+                                <p class="text-muted">English, Mandarin</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4>Programming</h4>
+                                <p class="text-muted">Python, C++</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="about-interests">
+                    <h3 class="mb-4 text-center">Interests & Passions</h3>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h5>Data Analysis</h5>
+                                <p class="text-muted">
+                                    Passionate about extracting insights from complex datasets and 
+                                    using statistical methods to drive decision-making.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fas fa-skating"></i>
+                                </div>
+                                <h5>Ice Skating</h5>
+                                <p class="text-muted">
+                                    Teaching ice skating fundamentals to youth while developing 
+                                    patience, creativity, and communication skills.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fas fa-music"></i>
+                                </div>
+                                <h5>Cultural Arts</h5>
+                                <p class="text-muted">
+                                    Celebrating Chinese culture through traditional dance performances 
+                                    and connecting with my heritage.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="about-cta">
+                    <h3 class="mb-3">Want to Learn More?</h3>
+                    <p class="mb-4">Feel free to explore my education, activities, and skills, or reach out directly!</p>
+                    <div class="btn-group-vertical btn-group-sm-horizontal">
+                        <a href="{{ url_for('education') }}" class="btn btn-outline-primary me-2 mb-2">
+                            <i class="fas fa-graduation-cap me-2"></i>Education
+                        </a>
+                        <a href="{{ url_for('activities') }}" class="btn btn-outline-primary me-2 mb-2">
+                            <i class="fas fa-star me-2"></i>Activities
+                        </a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mb-2">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
