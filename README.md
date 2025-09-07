@@ -233,7 +233,7 @@ CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
 - **Soft Skills**: Teaching, creativity, cultural awareness
 
 ### 📬 Contact Page (`/contact`)
-- **Contact Information**: Email, phone, LinkedIn, location
+- **Contact Information**: Email, LinkedIn, location
 - **Contact Form**: Interactive form with validation
 - **Response Times**: Expected communication timelines
 - **Availability**: Open opportunities and interests
@@ -370,7 +370,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Kaidi Zhang**
 - 📧 Email: [zkaidi@umich.edu](mailto:zkaidi@umich.edu)
-- 📱 Phone: (734) 730-0647
 - 💼 LinkedIn: [kaidi-zhang-6a862a2b0](https://www.linkedin.com/in/kaidi-zhang-6a862a2b0/)
 - 📍 Location: Ann Arbor, Michigan 48103
 
