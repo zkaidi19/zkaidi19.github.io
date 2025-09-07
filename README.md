@@ -316,15 +316,15 @@ You can also build static files locally:
 # Generate static files
 uv run python build_static.py
 
-# Files will be created in /docs directory
+# Files will be created in root directory
 ```
 
 ### GitHub Pages Configuration
 
-1. Go to repository **Settings** → **Pages**
-2. Set **Source** to "Deploy from a branch"
-3. Select **Branch**: `main` and **Folder**: `/docs`
-4. Save settings
+For `{username}.github.io` repositories, **no configuration is needed!** GitHub automatically:
+- Serves files from the root directory
+- Updates the site when you push to the `main` branch
+- Makes your site available at `https://zkaidi19.github.io`
 
 The site will automatically update whenever you push changes to the main branch!
 

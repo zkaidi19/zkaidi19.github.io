@@ -12,46 +12,31 @@ from app import app
 
 def create_output_directory():
     """Create and clean the output directory"""
-    output_dir = Path('docs')  # GitHub Pages can serve from /docs folder
-    if output_dir.exists():
-        shutil.rmtree(output_dir)
+    # For {username}.github.io repos, GitHub Pages serves from root directory
+    output_dir = Path('.')  # Current directory (root)
     
-    output_dir.mkdir(exist_ok=True)
+    # Clean up any existing HTML files (but keep source files)
+    html_files = ['index.html', 'about.html', 'education.html', 'activities.html', 'skills.html', 'contact.html', '404.html']
+    for html_file in html_files:
+        html_path = output_dir / html_file
+        if html_path.exists():
+            html_path.unlink()
     
-    # Create subdirectories
-    (output_dir / 'static' / 'css').mkdir(parents=True, exist_ok=True)
-    (output_dir / 'static' / 'js').mkdir(parents=True, exist_ok=True)
-    (output_dir / 'static' / 'images').mkdir(parents=True, exist_ok=True)
+    # Clean up API directory if it exists
+    api_dir = output_dir / 'api'
+    if api_dir.exists():
+        shutil.rmtree(api_dir)
+    
+    # Create API directory
+    api_dir.mkdir(exist_ok=True)
     
     return output_dir
 
 def copy_static_files(output_dir):
-    """Copy static files (CSS, JS, images) to output directory"""
-    static_src = Path('static')
-    static_dest = output_dir / 'static'
-    
-    if static_src.exists():
-        # Copy CSS files
-        css_src = static_src / 'css'
-        if css_src.exists():
-            for css_file in css_src.glob('*.css'):
-                shutil.copy2(css_file, static_dest / 'css')
-        
-        # Copy JS files
-        js_src = static_src / 'js'
-        if js_src.exists():
-            for js_file in js_src.glob('*.js'):
-                shutil.copy2(js_file, static_dest / 'js')
-        
-        # Copy image files
-        img_src = static_src / 'images'
-        if img_src.exists():
-            for img_file in img_src.rglob('*'):
-                if img_file.is_file():
-                    rel_path = img_file.relative_to(img_src)
-                    dest_path = static_dest / 'images' / rel_path
-                    dest_path.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copy2(img_file, dest_path)
+    """Static files are already in the right place - no need to copy for root deployment"""
+    # For root deployment, static files are already in /static directory
+    # No copying needed since we're generating HTML files in the same directory
+    print("ℹ️  Static files already in correct location (/static)")
 
 def generate_static_pages(output_dir):
     """Generate static HTML pages from Flask routes"""
@@ -197,11 +182,12 @@ def main():
     print("✅ Static site generation complete!")
     print(f"📂 Files generated in: {output_dir.absolute()}")
     print("\n🚀 Deployment Instructions:")
-    print("1. Commit and push all changes to your repository")
-    print("2. Go to GitHub repository settings")
-    print("3. Enable GitHub Pages and set source to 'Deploy from a branch'")
-    print("4. Select 'main' branch and '/docs' folder")
-    print("5. Your site will be available at: https://zkaidi19.github.io")
+    print("1. Commit and push all changes to your repository:")
+    print("   git add .")
+    print("   git commit -m 'Deploy personal website'")
+    print("   git push origin main")
+    print("2. Your site will be automatically available at: https://zkaidi19.github.io")
+    print("3. No GitHub Pages configuration needed for {username}.github.io repos!")
     print("\n💡 The site will automatically update when you push changes!")
 
 if __name__ == '__main__':

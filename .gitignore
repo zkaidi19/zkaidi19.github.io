@@ -189,5 +189,7 @@ Desktop.ini
 .env.test.local
 .env.production.local
 
-# Static site generation (keep docs/ for GitHub Pages)
-# docs/ - We want to keep this for GitHub Pages deployment
+# Development files (keep generated HTML files for GitHub Pages)
+# Keep *.html files in root - these are generated for GitHub Pages
+# Keep api/ directory - contains static JSON data
+# Keep .nojekyll - required for GitHub Pages

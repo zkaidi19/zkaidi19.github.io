@@ -16,13 +16,13 @@ git commit -m "Add personal website with GitHub Pages deployment"
 git push origin main
 ```
 
-### Step 2: Enable GitHub Pages
-1. Go to your repository on GitHub: `https://github.com/zkaidi19/zkaidi19.github.io`
-2. Click on **Settings** (in the repository menu)
-3. Scroll down to **Pages** (in the left sidebar)
-4. Under **Source**, select "**Deploy from a branch**"
-5. Select **Branch**: `main` and **Folder**: `/docs`
-6. Click **Save**
+### Step 2: GitHub Pages (Automatic!)
+For `{username}.github.io` repositories, **GitHub Pages is automatically enabled!**
+
+No configuration needed - GitHub automatically:
+- Serves files from the root directory of your `main` branch
+- Updates your site whenever you push changes
+- Makes your site available at `https://zkaidi19.github.io`
 
 ### Step 3: Wait for Deployment
 - GitHub will automatically build and deploy your site
@@ -56,21 +56,23 @@ Once set up, your website will automatically update whenever you:
 ## 📁 File Structure Explanation
 
 ```
-├── docs/                    # Generated static files (served by GitHub Pages)
-├── templates/              # Flask templates (source files)
-├── static/                # Static assets (source files)
+├── *.html                 # Generated static pages (served by GitHub Pages)
+├── api/                   # Static JSON data
+├── static/                # CSS, JS, images
+├── templates/             # Flask templates (source files)
 ├── app.py                 # Flask application (for development)
 ├── build_static.py        # Static site generator
-├── .github/workflows/     # GitHub Actions for auto-deployment
+├── .github/workflows/     # GitHub Actions for auto-generation
 └── README.md             # Project documentation
 ```
 
 ## 🔧 Troubleshooting
 
 ### If the site doesn't load:
-1. Check GitHub Actions tab for build errors
-2. Ensure GitHub Pages is enabled in repository settings
-3. Verify the source is set to `main` branch and `/docs` folder
+1. Check that you pushed to the `main` branch
+2. Verify your repository is named `zkaidi19.github.io` exactly
+3. Check GitHub Actions tab for any build errors
+4. Wait a few minutes - GitHub Pages can take time to update
 
 ### If changes don't appear:
 1. Check if the build completed successfully in Actions
